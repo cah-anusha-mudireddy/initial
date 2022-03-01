@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "visit",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "vist_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "visit_type": {
+      "enum": [
+        "Lab",
+        "Office",
+        "Visit",
+        "Other",
+        "Radiology",
+        "Treatment",
+        "Virtual Visit"
+      ]
+    },
+    "visit_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "location_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "visit_desc": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "visit_id",
+    "visit_type",
+    "visit_date",
+    "transaction_timestamp",
+    "provider_id",
+    "location_id",
+    "visit_desc"
+  ]
+}

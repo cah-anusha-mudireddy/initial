@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "registry",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "patient_lastname": {
+      "type": "string",
+      "pattern": "^[\\w,\\.\\/'-]+$"
+    },
+    "patient_firstname": {
+      "type": "string",
+      "pattern": "^[\\w,\\.\\/'-]+$"
+    },
+    "patient_middlename": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date"
+    },
+    "gender": {
+      "enum": [
+        "M",
+        "F",
+        "U"
+      ]
+    },
+    "primary_payor": {
+      "type": "string"
+    },
+    "payer_financial_class": {
+      "enum": [
+        "Commercial",
+        "Medicare",
+        "Medicaid",
+        "Other",
+        "Self Pay",
+        ""
+      ]
+    },
+    "has_pcp": {
+      "enum": [
+        "Y",
+        "N",
+        ""
+      ]
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "patient_lastname",
+    "patient_firstname",
+    "patient_middlename",
+    "date_of_birth",
+    "gender",
+    "primary_payor",
+    "payer_financial_class",
+    "has_pcp"
+  ]
+}

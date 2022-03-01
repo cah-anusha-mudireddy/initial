@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "demographics",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "patient_mrn": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "patient_ssn": {
+      "type": "string",
+      "pattern": "^[\\d-]+$"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date"
+    },
+    "death_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "gender": {
+      "enum": [
+        "M",
+        "F",
+        "O",
+        "U",
+        ""
+      ]
+    },
+    "race": {
+      "enum": [
+        "Alaska Native",
+        "Asian",
+        "Black or African American",
+        "Native Hawaiian or Other Pacific Islander",
+        "Other",
+        "Patient Declined",
+        "White",
+        ""
+      ]
+    },
+    "preferred_language": {
+      "type": "string"
+    },
+    "address_1": {
+      "type": "string",
+      "pattern": "^[\\w,\\.\\/'-]+$"
+    },
+    "address_2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "state": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "zip": {
+      "type": "string",
+      "pattern": "^(\\d{5})?$"
+    },
+    "ethnicity": {
+      "type": "string",
+      "enum": [
+        "Hispanic or Latino",
+        "Not Hispanic or Latino",
+        "Patient Declined",
+        ""
+      ]
+    },
+    "patient_lastname": {
+      "type": "string",
+      "pattern": "^[\\w,\\.\\/'-]+$"
+    },
+    "patient_firstname": {
+      "type": "string",
+      "pattern": "^[\\w,\\.\\/'-]+$"
+    },
+    "patient_middlename": {
+      "type": "string"
+    },
+    "patient_suffix": {
+      "type": "string"
+    },
+    "email_address": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string",
+      "pattern": "^(\\d{3}-\\d{3}-\\d{4})?$"
+    },
+    "phone_number_type": {
+      "type": "string",
+      "enum": [
+        "Home",
+        "Work",
+        "Mobile",
+        "Other",
+        ""
+      ]
+    },
+    "active_date": {
+      "enum": [
+        "0",
+        "1"
+      ]
+    },
+    "status_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "patient_mrn",
+    "patient_ssn",
+    "date_of_birth",
+    "date_of_death",
+    "gender",
+    "race",
+    "preferred_language",
+    "address_1",
+    "address_2",
+    "city",
+    "state",
+    "zip",
+    "ethnicity",
+    "patient_lastname",
+    "patient_firstname",
+    "patient_middlename",
+    "patient_suffix",
+    "email_address",
+    "phone_number",
+    "phone_number_type",
+    "active_flag",
+    "status_date"
+  ]
+}

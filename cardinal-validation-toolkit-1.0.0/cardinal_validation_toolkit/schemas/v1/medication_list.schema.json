@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "medication_list",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "medication_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "ordered_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "medication_name": {
+      "type": "string",
+      "pattern": "^[\\w#()\\-%\\.]+$"
+    },
+    "drug_category": {
+      "enum": [
+        "Anti-Infective",
+        "Antianemic",
+        "Antidepressant",
+        "Antiemetic",
+        "Antineoplastic",
+        "Bone Therapy Agent (BTA)",
+        "Chemotherapy",
+        "Cytoprotective",
+        "G-CSF/GM-CSF",
+        "Glucocorticoid",
+        "Hematological Agent",
+        "Hormone Therapy",
+        "Immunotherapy",
+        "Other",
+        "Pain Agent",
+        "Solution-Fluid",
+        "Steroid",
+        "Targeted Therapy",
+        ""
+      ]
+    },
+    "ndc_code": {
+      "type": "string",
+      "pattern": "^(\\d{5}-\\d{3}-\\d{2})?$"
+    },
+    "units": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "refill": {
+      "type": "string"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "medication_id",
+    "ordered_date",
+    "medication_name",
+    "drug_category",
+    "ndc_code",
+    "units",
+    "frequency",
+    "route",
+    "transaction_timestamp",
+    "quantity",
+    "refill"
+  ]
+}

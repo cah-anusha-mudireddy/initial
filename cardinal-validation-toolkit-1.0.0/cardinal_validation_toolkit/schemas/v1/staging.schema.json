@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "staging",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "diagnosis_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "stage_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "staging_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "stage_value": {
+      "type": "string"
+    },
+    "stage_basis": {
+      "type": "string"
+    },
+    "t": {
+      "type": "string"
+    },
+    "n": {
+      "type": "string"
+    },
+    "m": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "histology": {
+      "type": "string"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "crit_desc": {
+      "type": "string"
+    },
+    "staging_version": {
+      "enum": [
+        "AJCC v7",
+        "AJCC v8",
+        "Binet",
+        "ISS",
+        "Lugano (Ann Arbor)",
+        "R-ISS",
+        "Rai",
+        "AJCC v9 (FIGO)"
+      ]
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "diagnosis_id",
+    "stage_id",
+    "staging_timestamp",
+    "stage_value",
+    "stage_basis",
+    "t",
+    "n",
+    "m",
+    "grade",
+    "histology",
+    "transaction_timestamp",
+    "crit_desc",
+    "staging_version"
+  ]
+}

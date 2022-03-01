@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "diagnosis",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "disgnosis_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "primary_flag": {
+      "enum": [
+        "Y",
+        "N",
+        ""
+      ]
+    },
+    "diagnosis_desc": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "diagnosis_datetime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "patient_status": {
+      "enum": [
+        "Active",
+        "Chronic",
+        "Complete Response",
+        "Controlled",
+        "Cured",
+        "In Remission",
+        "Inactive",
+        "Initial Diagnosis",
+        "Intermittent",
+        "Local or Regional Recurrence/Relapse",
+        "Metastasis",
+        "Metastatic Disease",
+        "NED",
+        "No Evidence of Disease/Remission",
+        "---Oncology/Hematology?Status---",
+        "Other",
+        "Partial Response",
+        "Progressed",
+        "Progressive Disease",
+        "Recurrent",
+        "Resolved",
+        "Responding",
+        "Responding but not at treatment goal",
+        "Ruled Out",
+        "Ruled out",
+        "Stable",
+        "Stable Disease",
+        "Stable Disease - at treatment goal",
+        "Worsening",
+        "NULL",
+        "",
+        "Complete remission",
+        "End Stage",
+        "Improving",
+        "Little/No Improve",
+        "Metastatic Disease",
+        "Mets: Bone",
+        "Mets: Brain",
+        "Mets: Liver",
+        "Mets: Other",
+        "Mets:Lung",
+        "Partial Remission",
+        "Progression of Disease",
+        "Recurrence",
+        "Relapse",
+        "Relapsed/ Refractory",
+        "Too Early to tell",
+        "0",
+        "Complete remission",
+        "Deceased",
+        "End Stage",
+        "Improved",
+        "Improving",
+        "Littl/No Improve",
+        "Metastatic Desease",
+        "Minimal Remission",
+        "Not improved",
+        "Partial Remission",
+        "Rule out",
+        "Mets: Lung"
+      ]
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "icd_code": {
+      "type": "string",
+      "pattern": "^[\\w\\.]+$"
+    },
+    "diagnosis_code_sys": {
+      "enum": [
+        "ICD-10-CM",
+        "ICD-9-CM"
+      ]
+    },
+    "cancer_diagnosis_ind": {
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "diagnosis_id",
+    "primary_flag",
+    "diagnosis_desc",
+    "diagnosis_datetime",
+    "patient_status",
+    "transaction_timestamp",
+    "icd_code",
+    "diagnosis_code_sys",
+    "cancer_diagnosis_ind"
+  ]
+}

@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cardinal-validation-toolkit"
+version = "1.0.0"
+description = "Validates Cardinal CSV files"
+authors = ["Product Engineering"]
+
+[[tool.poetry.source]]
+default = true
+name = "jvion-technology"
+url = "https://pkgs.dev.azure.com/jvion-technology/_packaging/jvion-technology/pypi/simple/"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+importlib-resources = "^5.3.0"
+fastjsonschema = "^2.15.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+coverage = "^5.5"
+autopep8 = "^1.5.7"
+pylint = "^2.8.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

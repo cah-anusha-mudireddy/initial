@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "provider",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "provider_name": {
+      "type": "string",
+      "pattern": "^[\\w,\\.\\/'-]+$"
+    },
+    "provider_taxonomy": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 25,
+      "pattern": "^\\w+$"
+    },
+    "provider_npi": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "provider_id",
+    "provider_name",
+    "provider_taxonomy",
+    "provider_npi",
+    "transaction_timestamp",
+    "current_indicator"
+  ]
+}

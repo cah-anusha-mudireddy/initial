@@ -1,0 +1,134 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "title": "vitals",
+   "type": "object",
+   "properties": {
+      "patient_id": {
+         "type": "string",
+         "pattern": "\\w"
+      },
+      "lab_id": {
+         "type": "string",
+         "pattern": "\\w"
+      },
+      "comment": {
+         "type": "string"
+      },
+      "diastolicbp": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}|[1][0-4][0-9]|150)?$"
+      },
+      "diastolicbp_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "height": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}\\.\\d{2}|(100.00))?$"
+      },
+      "height_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "lvef": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}|100)?$"
+      },
+      "lvef_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "pain_scale": {
+         "type": "string",
+         "pattern": "^(\\d{1}|(10))?$"
+      },
+      "pain_scale_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "pulse": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}|[1]\\d{1}\\d{1}|[2][0-4][0-9]|(250))?$"
+      },
+      "pulse_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "pulse_ox": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}|100)?$"
+      },
+      "pulse_ox_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "resp": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}|100)?$"
+      },
+      "resp_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "systolicbp": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}|[1-2]\\d{1}\\d{1}|300)?$"
+      },
+      "systolicbp_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "temp": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}\\.\\d{2}|[1][0-1][0-4]\\.\\d{2}|(115.00))?$"
+      },
+      "temp_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "weight": {
+         "type": "string",
+         "pattern": "^(\\d{1,2}\\.\\d{2}|[0-7][0-9][0-9]\\.\\d{2}|(800.00))?$"
+      },
+      "weight_unit": {
+         "enum": [
+            "Kg",
+            "Lb"
+         ]
+      },
+      "weight_timestamp": {
+         "type": "string",
+         "format": "date-time"
+      },
+      "extract_generation_datetime": {
+         "type": "string",
+         "format": "date-time"
+      }
+   },
+   "required": [
+      "patient_id",
+      "lab_id",
+      "comment",
+      "diastolicbp",
+      "diastolicbp_timestamp",
+      "height",
+      "height_timestamp",
+      "lvef",
+      "lvef_timestamp",
+      "pain_scale",
+      "pain_scale_timestamp",
+      "pulse",
+      "pulse_timestamp",
+      "pulse_ox",
+      "pulse_ox_timestamp",
+      "resp",
+      "resp_timestamp",
+      "systolicbp",
+      "systolicbp_timestamp",
+      "temp",
+      "temp_timestamp",
+      "weight",
+      "weight_unit",
+      "weight_timestamp"
+   ]
+}

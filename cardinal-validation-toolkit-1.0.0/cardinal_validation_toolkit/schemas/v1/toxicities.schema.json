@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "toxicities",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "toxicity": {
+      "type": "string",
+      "enum": [
+        "Abdominal Pain",
+        "Anorexia",
+        "Arthralgia",
+        "Blood and lymphatic system disorders - Other",
+        "spec",
+        "Blurred vision",
+        "Bone Pain",
+        "Chest pain - cardiac",
+        "Chills",
+        "Compliance with Medications and Medical Advice",
+        "Constipation",
+        "Cough",
+        "Dehydration",
+        "Diarrhea",
+        "Diarrhea ( including ostomy output)",
+        "Diarrhea Colostomy",
+        "Diplopia",
+        "Drug and Alchohol Use",
+        "Dry eye",
+        "Dysphagia",
+        "Dyspnea (SOB)",
+        "Family Stability",
+        "Family Support System",
+        "Febrile Neutropenia",
+        "Fever",
+        "Frequency",
+        "Frequency/Urgency",
+        "Gastrointestinal pain",
+        "Headache",
+        "Hearing Impaired",
+        "Hearing Loss",
+        "Hematuria",
+        "Hot Flashes",
+        "Incontinence",
+        "Mucositis-Rectal",
+        "Myalgia",
+        "Nausea",
+        "Neutropenia-AGC/ANC",
+        "Oxaliplatin Neuro-toxicity",
+        "Peripheral motor neuropathy",
+        "Peripheral Neuropahty (Motor)",
+        "Peripheral sensory neuropathy",
+        "Pruritus",
+        "Pruritus/Itching",
+        "Rash maculo-papular",
+        "Rash: Acne/Acneiform",
+        "Rash:Acneiform",
+        "Rash: Acneiform",
+        "Rash/Desquamation",
+        "Rigors/chills",
+        "Risk of Psychopathology",
+        "Seizures",
+        "Skin Ulceration",
+        "Stomatitis",
+        "Ulcerative Lesions",
+        "Urinary incontinence",
+        "Urinary tract pain",
+        "Urinary urgency",
+        "Vomiting",
+        "Watering eyes",
+        "Weight Loss",
+        "Other",
+        "Anemia-Hgb",
+        "Hand Foot Syndrom",
+        "Leukopenia-WBC",
+        "Mucositis",
+        "Mucositis/Stomatitis (symptomatic)",
+        "Thrombocytopenia-PLTs"
+      ]
+    },
+    "toxicity_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "toxicity_grade": {
+      "type": "string",
+      "pattern": "^[0-5]$"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "toxicity",
+    "toxicity_timestamp",
+    "toxicity_grade"
+  ]
+}

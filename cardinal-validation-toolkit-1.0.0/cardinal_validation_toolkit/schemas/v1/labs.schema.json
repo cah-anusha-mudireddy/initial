@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "labs",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "lab_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "max_norm": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "min_norm": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "result_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "test_name": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "test_result": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "test_units": {
+      "type": "string"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "loinc": {
+      "type": "string",
+      "pattern": "^(\\d{2,5}-\\d)?$"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "lab_id",
+    "max_norm",
+    "min_norm",
+    "result_timestamp",
+    "test_name",
+    "test_result",
+    "test_units",
+    "transaction_timestamp",
+    "loinc"
+  ]
+}

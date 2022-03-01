@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "orders",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "diagnosis_id": {
+      "type": "string"
+    },
+    "expected_start_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expected_stop_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "form": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "icd_code": {
+      "type": "string"
+    },
+    "diagnosis_code_sys": {
+      "enum": [
+        "ICD-10-CM",
+        "ICD-9-CM",
+        ""
+      ]
+    },
+    "ndc_code": {
+      "type": "string",
+      "pattern": "^(\\d{5}-\\d{3}-\\d{2})?$"
+    },
+    "ordered_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ordered_units": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "order_name": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "order_type": {
+      "enum": [
+        "Activity",
+        "Drug",
+        "Lab",
+        "Radiology",
+        "Regimen Rule"
+      ]
+    },
+    "order_status": {
+      "enum": [
+        "Complete",
+        "Locked",
+        "See Lab",
+        "Signed",
+        "Started",
+        "Stopped",
+        "Acknowledged",
+        "Requisitioned",
+        ""
+      ]
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "quantity_units": {
+      "type": "string"
+    },
+    "days_supply": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "refill": {
+      "type": "string"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "diagnosis_id",
+    "expected_start_date",
+    "expected_stop_date",
+    "form",
+    "frequency",
+    "icd_code",
+    "diagnosis_code_sys",
+    "ndc_code",
+    "ordered_date",
+    "ordered_units",
+    "order_id",
+    "order_name",
+    "order_type",
+    "order_status",
+    "provider_id",
+    "quantity",
+    "quantity_units",
+    "days_supply",
+    "refill",
+    "route",
+    "transaction_timestamp"
+  ]
+}

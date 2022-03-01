@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "insurance",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "payer": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "payer_financial_class": {
+      "enum": [
+        "Commercial",
+        "Medicare",
+        "Medicaid",
+        "Other",
+        "Self Pay",
+        ""
+      ]
+    },
+    "medicare_adv_ind": {
+      "enum": [
+        "Y",
+        "N",
+        ""
+      ]
+    },
+    "ins_effective_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "ins_inactive_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "insurance_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "primary_indicator": {
+      "enum": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "Other"
+      ]
+    },
+    "current_indicator": {
+      "enum": [
+        "Y",
+        "N",
+        ""
+      ]
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "payer",
+    "payer_financial_class",
+    "medicare_adv_ind",
+    "ins_effective_date",
+    "ins_inactive_date",
+    "transaction_timestamp",
+    "insurance_id",
+    "primary_indicator",
+    "current_indicator"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "charge",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "charge_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "service_code": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "servicecodedescription": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "bill_code_type": {
+      "enum": [
+        "CPT",
+        "Jcode"
+      ]
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "location_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "date_of_service": {
+      "type": "string",
+      "format": "date"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "icd_hold": {
+      "type": "string"
+    },
+    "icd_code_1": {
+      "type": "string"
+    },
+    "icd_code_2": {
+      "type": "string"
+    },
+    "icd_code_3": {
+      "type": "string"
+    },
+    "icd_code_4": {
+      "type": "string"
+    },
+    "icd_code_5": {
+      "type": "string"
+    },
+    "icd_code_6": {
+      "type": "string"
+    },
+    "icd_code_7": {
+      "type": "string"
+    },
+    "icd_code_8": {
+      "type": "string"
+    },
+    "icd_code_9": {
+      "type": "string"
+    },
+    "icd_code_10": {
+      "type": "string"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "charge_id",
+    "service_code",
+    "servicecodedescription",
+    "bill_code_type",
+    "provider_id",
+    "location_id",
+    "date_of_service",
+    "transaction_timestamp",
+    "icd_hold",
+    "icd_code_1",
+    "icd_code_2",
+    "icd_code_3",
+    "icd_code_4",
+    "icd_code_5",
+    "icd_code_6",
+    "icd_code_7",
+    "icd_code_8",
+    "icd_code_9",
+    "icd_code_10"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "social_history",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "social_name": {
+      "enum": [
+        "Alcohol Use",
+        "Smoking Cessation Intervention",
+        "Smoking Cessation Intervention Rx",
+        "Tobacco Use"
+      ]
+    },
+    "record_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "social_history_id": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "social_value": {
+      "type": "string",
+      "pattern": "^\\w+$"
+    },
+    "transaction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "extract_generation_datetime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patient_id",
+    "social_name",
+    "record_timestamp",
+    "social_history_id",
+    "social_value",
+    "transaction_timestamp"
+  ]
+}
